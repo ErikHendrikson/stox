@@ -1,0 +1,54 @@
+@import "../scss/main.scss";
+
+.c-navigation {
+  &__hamburger {
+    display: inline-block;
+    cursor: pointer;
+    padding: $space-4;
+
+    &__center {
+      background-color: black;
+      position: relative;
+      height: $space-1;
+      width: $space-8;
+
+      &:before {
+        position: absolute;
+        background-color: black;
+        content: " ";
+        top: -$space-3;
+        width: $space-8;
+        height: $space-1;
+      }
+
+      &:after {
+        position: absolute;
+        background-color: black;
+        content: " ";
+        top: $space-3;
+        width: $space-8;
+        height: $space-1;
+      }
+    }
+  }
+}
+
+#toggle {
+  display: none;
+
+  &:checked ~ .c-navigation__label .c-navigation__hamburger {
+    &__center {
+      background-color: inherit;
+
+      &:before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+}

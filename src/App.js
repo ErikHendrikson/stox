@@ -1,7 +1,10 @@
+import Navigation from "./components/Navigation";
+import "./scss/main.scss";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">hoi</header>
+      <Navigation></Navigation>
     </div>
   );
 }
