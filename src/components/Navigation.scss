@@ -1,35 +1,71 @@
 @import "../scss/main.scss";
 
 .c-navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  padding: $space-4;
+  background-color: yellow;
+
   &__hamburger {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    width: $space-6;
+    height: $space-6;
+    margin-right: $space-4;
     cursor: pointer;
-    padding: $space-4;
 
     &__center {
       background-color: black;
       position: relative;
-      height: $space-1;
-      width: $space-8;
+      height: ($space-1)-2;
+      width: $space-6;
 
       &:before {
         position: absolute;
         background-color: black;
         content: " ";
-        top: -$space-3;
-        width: $space-8;
-        height: $space-1;
+        top: -$space-2;
+        width: $space-6;
+        height: ($space-1)-2;
       }
 
       &:after {
         position: absolute;
         background-color: black;
         content: " ";
-        top: $space-3;
-        width: $space-8;
-        height: $space-1;
+        top: $space-2;
+        width: $space-6;
+        height: ($space-1)-2;
       }
     }
+  }
+
+  &__left, &__right {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: $space-6;
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
+
+  &__right {
+    justify-content: flex-end;
+  }
+
+  &__image {
+    max-height: 100%;
+    object-fit: contain;
+    margin-left: $space-3;
+  }
+
+  &__logo {
+    max-height: $space-5;
+    object-fit: contain;
   }
 }
 
