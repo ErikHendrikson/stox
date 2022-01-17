@@ -1,0 +1,33 @@
+@import "../scss/main.scss";
+
+.c-accordion {
+  width: 100%;
+  padding-top: $space-4;
+  padding-bottom: $space-4;
+  padding-left: $space-8;
+  padding-right: $space-8;
+  border-top: solid 1px lightgrey;
+
+  &__title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__arrow {
+    font-family: 'Arial Unicode MS';
+    transform: rotate(180deg);
+  }
+
+  &__list {
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  &__item {
+    padding-top: $space-4;
+    padding-bottom: $space-4;
+  }
+}
+

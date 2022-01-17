@@ -1,12 +1,18 @@
 @import "../scss/main.scss";
 
 .c-navigation {
+
+  display: flex;
+  flex-direction: column;
+
+  &__top {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 20vw;
   padding: $space-4;
   background-color: yellow;
+  }
 
   &__hamburger {
     display: flex;
@@ -87,4 +93,65 @@
       }
     }
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide div {
+  width: 45.75vw;
+  height: 53.333vw;
+  position: relative;
+
+  &:before {
+    content:"";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(rgba(18, 18, 18, 0), rgba(18, 18, 18, 0), rgba(18, 18, 18, 0.4));;
+}
+
+.c-swiper {
+
+  &__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: $space-3;
+    left: $space-3;
+    font-size: medium;
+    font-weight: 500;
+    color: white;
+  }
+}
 }
